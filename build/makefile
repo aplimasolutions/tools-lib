@@ -4,7 +4,6 @@ all: clean download_deps generate compile convert-to-pdf purge_tempfiles
 
 clean:
 	@echo "Cleaning up..."
-	-rm files.txt
 	-rm ../content/home/output.md
 	-rm output.pdf
 	-rm compile.sh
@@ -30,5 +29,5 @@ convert-to-pdf:
 
 purge_tempfiles:
 	@echo "removing tempfiles.."
-	-rm files.txt
+	-rm ../content/home/output.md
 	-rm compile.sh
