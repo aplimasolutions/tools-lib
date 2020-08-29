@@ -5,7 +5,7 @@
 output="../content/home/output.md"
 content_path="../content/home"
 # this file will be pre-generated in previous make target
-input="files.txt"
+input="modules.txt"
 while IFS= read -r file
 do
   echo "compiling $file..."

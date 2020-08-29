@@ -1,6 +1,6 @@
 # makefile to compile md files to convert .docx
 .PHONY: all compile convert-to-pdf clean download_deps purge_tempfiles
-all: clean download_deps generate compile convert-to-pdf purge_tempfiles
+all: clean download_deps compile convert-to-pdf purge_tempfiles
 
 clean:
 	@echo "Cleaning up..."
@@ -13,10 +13,6 @@ download_deps:
 	curl -O https://raw.githubusercontent.com/aplimasolutions/tools-lib/master/build/compile.sh
 	@echo "Granting execute permission.."
 	chmod a+x compile.sh
-
-generate:
-	@echo "Generating the list of files to be compiled.."
-	ls ../content/home/ > files.txt
 
 compile:
 	@echo "compiling.."
