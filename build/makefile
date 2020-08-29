@@ -1,6 +1,6 @@
 # makefile to compile md files to convert .docx
-.PHONY: all compile convert-to-pdf clean download_deps purge_list
-all: clean download_deps generate compile convert-to-pdf purge_list
+.PHONY: all compile convert-to-pdf clean download_deps purge_tempfiles
+all: clean download_deps generate compile convert-to-pdf purge_tempfiles
 
 clean:
 	@echo "Cleaning up..."
@@ -28,6 +28,7 @@ convert-to-pdf:
 	@echo "importing pdf doc"
 	mv ../content/home/output.pdf .
 
-purge_list:
-	@echo "removing file list.."
+purge_tempfiles:
+	@echo "removing tempfiles.."
 	-rm files.txt
+	-rm compile.sh
