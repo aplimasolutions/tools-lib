@@ -8,6 +8,8 @@ content_path="../content/home"
 input="modules.txt"
 while IFS= read -r file
 do
+  # skip line that starts with comment #
+  [[ "$line" =~ ^#.*$ ]] && continue
   echo "compiling $file..."
   sed 1,3d "$content_path/$file" >> "$output"
   # add couple of empty lines at the end of the file
