@@ -11,7 +11,9 @@ clean:
 
 download_deps:
 	@echo "Downloding compile.sh.."
-	curl -O https://raw.githubusercontent.com/aplimasolutions/tools-lib/master/build/compile.sh 
+	curl -O https://raw.githubusercontent.com/aplimasolutions/tools-lib/master/build/compile.sh
+	@echo "Granting execute permission.."
+	chmod a+x compile.sh
 
 generate:
 	@echo "Generating the list of files to be compiled.."
