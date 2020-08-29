@@ -4,10 +4,10 @@ all: clean generate compile convert-to-pdf
 
 clean:
 	@echo "Cleaning up..."
-	rm files.txt
-	rm ../content/home/output.md
-	rm output.pdf
-	rm compile.sh
+	-rm files.txt
+	-rm ../content/home/output.md
+	-rm output.pdf
+	-rm compile.sh
 
 download_deps:
 	@echo "Downloding compile.sh.."
