@@ -1,6 +1,6 @@
 # makefile to compile md files to convert .docx
 .PHONY: all compile convert-to-pdf clean
-all: clean generate compile convert-to-pdf
+all: clean download_deps generate compile convert-to-pdf
 
 clean:
 	@echo "Cleaning up..."
@@ -25,5 +25,3 @@ compile:
 convert-to-pdf:
 	@echo "importing pdf doc"
 	mv ../content/home/output.pdf .
-
-
